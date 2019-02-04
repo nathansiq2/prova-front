@@ -1,0 +1,100 @@
+<app-header [Titulo]="'CADASTRO'"></app-header>
+<div
+  style="display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5em;"
+>
+  <div style="display: flex; margin-bottom: 1.5em;">
+    <span class="ui-float-label separator-margin flex-input">
+      <span class="separator-margin input-title ">Nome do item*</span>
+      <input
+        id="float-input"
+        type="text"
+        size="30"
+        pInputText
+        [(ngModel)]="dados.nomeItem"
+        [ngClass]="{ 'input-error': nomeItemValid }"
+      />
+    </span>
+    <span class="ui-float-label separator-margin flex-input">
+      <span
+        class="separator-margin input-title"
+        [ngClass]="{ 'error-selectbutton': unidadeMedidaValid }"
+        >Unidade de medida*</span
+      >
+      <p-selectButton
+        [options]="types"
+        [(ngModel)]="dados.unidadeMedida"
+        (onChange)="changeUnidadeMedida()"
+      ></p-selectButton>
+    </span>
+
+    <span class="ui-float-label separator-margin flex-input">
+      <span class="separator-margin input-title">Quantidade</span>
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon">{{ unidade }}</span>
+        <input
+          style="width: 13em !important;"
+          id="float-input"
+          type="text"
+          size="30"
+          pInputText
+          [(ngModel)]="dados.quantidade"
+        />
+      </div>
+    </span>
+  </div>
+  <div style="display: flex; margin-bottom: 1.5em;">
+    <span class="ui-float-label separator-margin flex-input">
+      <span class="separator-margin input-title">Preço*</span>
+      <p-inputMask
+        mask="9999999,99"
+        [(ngModel)]="dados.preco"
+        placeholder="Ex: 232140,50"
+        styleClass="{{ precoItemValid }}"
+      ></p-inputMask>
+    </span>
+    <span class="ui-float-label separator-margin flex-input">
+      <span class="separator-margin input-title">Data de validade</span>
+      <p-inputMask
+        mask="99/99/9999"
+        [(ngModel)]="dados.dataValidade"
+        placeholder="99/99/9999"
+        slotChar="mm/dd/yyyy"
+        styleClass="{{ dataValidadeValid }}"
+      ></p-inputMask>
+    </span>
+    <span class="ui-float-label separator-margin flex-input">
+      <span class="separator-margin input-title">Data de fabricação*</span>
+      <p-inputMask
+        mask="99/99/9999"
+        [(ngModel)]="dados.dataFabricacao"
+        placeholder="99/99/9999"
+        slotChar="mm/dd/yyyy"
+        styleClass="{{ dataFabricacaoValid }}"
+      ></p-inputMask>
+    </span>
+  </div>
+  <div>
+    <span class="checkbox-title">Produto perecível</span>
+    <p-checkbox
+      class="separator-margin"
+      binary="true"
+      [(ngModel)]="dados.produtoPerecivel"
+    ></p-checkbox>
+    <app-button
+      style="margin-right: 5px"
+      [label]="'Salvar'"
+      (evento)="saving = true; salvarDados()"
+      [route]="'/lista'"
+    >
+    </app-button>
+    <app-button
+      (evento)="saving = false"
+      [label]="'Cancelar'"
+      [route]="'/lista'"
+    >
+    </app-button>
+  </div>
+</div>

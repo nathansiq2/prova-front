@@ -1,0 +1,5 @@
+<div *ngFor="let itemMenu of menuContent" class="menu-item">
+  <span class="menu-animation" routerLink="{{itemMenu.path}}" routerLinkActive="active" (click)="display = true">
+    {{ itemMenu.nome }}
+  </span>
+</div>

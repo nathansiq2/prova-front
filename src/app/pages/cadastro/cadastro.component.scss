@@ -1,0 +1,85 @@
+.title {
+  font-family: "Roboto";
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.3em;
+}
+
+.separator-margin {
+  margin-right: 1em;
+}
+
+.ui-inputtext {
+  font-size: 1em !important;
+  padding: 0.429em;
+  border: 2px solid #008267 !important;
+  width: 15em;
+}
+
+.flex-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-title {
+  font-size: 1.2em;
+}
+
+.checkbox-title {
+  font-size: 1.2em !important;
+  margin-right: 0.5em;
+}
+
+body .ui-chkbox .ui-chkbox-box.ui-state-active {
+  border-color: #008267 !important;
+  background-color: #008267 !important;
+}
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+.ui-selectbutton {
+  width: 17em;
+}
+
+body .ui-selectbutton .ui-button.ui-state-active {
+  background-color: #008267 !important;
+  border-color: #008267 !important;
+  color: white !important;
+}
+
+body .ui-button.ui-button-text-icon-left .ui-button-text {
+  padding: 0.5em;
+}
+
+.ui-button {
+  background-color: white !important;
+  border: 2px solid #008267 !important;
+  height: 2.4em !important;
+  font-size: 1em !important;
+  color: #008267 !important;
+  cursor: pointer !important;
+  border-radius: 0.4em !important;
+  font-weight: bold !important;
+}
+
+.error-selectbutton {
+  color: red;
+}
+
+body .ui-inputgroup .ui-inputgroup-addon {
+  border-color: #008267;
+  background-color: #008267;
+  color: #848484;
+  padding: 0.429em;
+  min-width: 2em;
+}
+
+body .ui-inputgroup .ui-inputgroup-addon {
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,47 @@
+<app-header [Titulo]="'LISTA'"></app-header>
+<p-confirmDialog></p-confirmDialog>
+
+<p-messages [value]="msgs"></p-messages>
+
+<div style="height: 6em; display: flex; align-items: center; margin-left: 4em">
+  <app-button [label]="'Novo'" [route]="'/cadastro'"></app-button>
+</div>
+
+<p-table [columns]="cols" [value]="dados" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th class="header-grid" *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+      <th class="header-grid">Ações</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td class="grid">{{ rowData.nomeItem }}</td>
+      <td class="grid">{{ teste(rowData.unidadeMedida) }}</td>
+      <td class="grid">{{ rowData.quantidade }}</td>
+      <td class="grid">{{ rowData.preco }}</td>
+      <td class="grid">
+        {{ rowData.produtoPerecivel ? "Sim" : "Não"}}
+      </td>
+      <td class="grid">{{ rowData.dataValidade }}</td>
+      <td class="grid">{{ rowData.dataFabricacao }}</td>
+      <td class="acoes-style align-buttons">
+        <i
+          class="pi pi-times"
+          style="color: red; font-size: 2.25em;"
+          (click)="confirmarExclusao(rowData['id'])"
+          title="Remover"
+        ></i>
+        <i
+          class="pi pi-pencil"
+          style="font-size: 2.25em;"
+          title="Editar"
+          routerLink="/cadastro"
+          [queryParams]="{ id: rowData['id'] }"
+        ></i>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

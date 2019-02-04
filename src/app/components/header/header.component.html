@@ -1,0 +1,10 @@
+<p-sidebar [(visible)]="display">
+  <app-menu-content [menuContent]="menuContent"></app-menu-content>
+</p-sidebar>
+
+<header class="header-style">
+  <i style=" flex-basis: 100%;">
+    <i class="pi pi-bars menu-icon" (click)="display = true"></i>
+  </i>
+  <span class="title">{{ Titulo }}</span>
+</header>

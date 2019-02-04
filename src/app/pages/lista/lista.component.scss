@@ -1,0 +1,74 @@
+.title {
+  font-family: "Roboto";
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.3em;
+}
+
+.grid {
+  color: #008267 !important;
+  border: 3px solid #008267 !important;
+  background-color: white !important;
+  font-size: 1.5em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+}
+
+.header-grid {
+  color: white !important;
+  border: 3px solid #008267 !important;
+  background-color: #008267 !important;
+  font-size: 1.5em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.acoes-style {
+  border: 3px solid #008267 !important;
+  background-color: white !important;
+}
+
+.align-buttons {
+  text-align: center;
+}
+
+.ui-paginator {
+  background-color: white !important;
+  border-bottom: 2px solid #008267 !important;
+  border-right: 2px solid #008267 !important;
+  border-left: 2px solid #008267 !important;
+}
+
+.ui-paginator-page {
+  background-color: #008267 !important;
+  color: white !important;
+  outline: none;
+}
+
+.ui-paginator-icon {
+  color: #008267 !important;
+}
+
+.ui-button {
+  background-color: white !important;
+  border: 2px solid #008267 !important;
+  height: 2.4em !important;
+  font-size: 1em !important;
+  color: #008267 !important;
+  cursor: pointer !important;
+  border-radius: 0.4em !important;
+  font-weight: bold !important;
+}
+
+.ui-table {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.ui-button-icon-left {
+  visibility: hidden;
+}
